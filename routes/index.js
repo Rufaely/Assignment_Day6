@@ -39,7 +39,7 @@ router.post('/newsletter', function (req, res, next) {
 
     });
 
-    res.render('thankyou', { title: 'newsletter', errors: errors, success: true, csrfToken: req.csrfToken() });
+    res.render('thankyou', {email : req.body.email, errors: errors, success: true, csrfToken: req.csrfToken() });
   }
 
 });
